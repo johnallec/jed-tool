@@ -42,11 +42,15 @@ public class SceneHandler {
 			this.scene = new Scene(root, MAIN_PAGE_WIDTH, MAIN_PAGE_HEIGH);
 
 		} catch (IOException e) {
-			e.printStackTrace();
+			e.printStackTrace(); // To be modified
 		}
 	}
 	
 	public void switchScene(Stage stage, String fxmlPath, String title, int width, int heigth) {
+		if(stage == null || fxmlPath == null || width < 0 || heigth < 0) {
+			//print an error page
+			return;
+		}
 		setCurrentScene(fxmlPath, width, heigth);
 		stage.setScene(scene);
 		stage.setTitle(title);
