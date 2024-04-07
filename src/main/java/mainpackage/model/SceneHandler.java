@@ -1,7 +1,6 @@
 package mainpackage.model;
 
 import java.io.IOException;
-
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -48,7 +47,7 @@ public class SceneHandler {
 	
 	public void switchScene(Stage stage, String fxmlPath, String title, int width, int heigth) {
 		if(stage == null || fxmlPath == null || width < 0 || heigth < 0) {
-			//print an error page
+			//show an error page
 			return;
 		}
 		setCurrentScene(fxmlPath, width, heigth);
